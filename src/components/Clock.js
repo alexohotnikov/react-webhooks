@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Alert from 'react-bootstrap/Alert';
 
 const Clock = (props) => {
   const getCurrentTime = () => {
@@ -14,7 +15,11 @@ const Clock = (props) => {
     }
   }, [])
   return(
-    <p> Current Time: { currentTime } </p>
+      <Alert {...props}>
+        <Alert.Heading> Hook useState </Alert.Heading>
+        <p> Current Time: { currentTime } </p>
+      </Alert>
+
   )
 }
 

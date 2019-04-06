@@ -1,4 +1,8 @@
 import React, { useReducer } from 'react';
+import Alert from 'react-bootstrap/Alert'
+import Button from 'react-bootstrap/Button';
+import './styles.css';
+
 
 function reduces(state, action) {
   const { type } = action;
@@ -22,10 +26,12 @@ export default (props) => {
   }
 
   return(
-    <React.Fragment>
-      <p> Counter: {count}</p>
-      <button onClick = {(e) => actionDo(e, 'increment')}> + </button>
-      <button onClick = {(e) => actionDo(e, 'decrement')}> - </button>
-    </React.Fragment>
+
+    <Alert {...props}>
+      <Alert.Heading> Hook useEffect </Alert.Heading>
+      <p> Counter: { count } </p>
+        <Button variant = "success" onClick={(e) => actionDo(e, 'increment')}> Плюсуем </Button>
+        <Button variant = "danger"  onClick={(e) => actionDo(e, 'decrement')}> Удаляем </Button>
+    </Alert>
   )
 }
