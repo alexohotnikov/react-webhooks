@@ -31,7 +31,7 @@ export default (props) => {
       <Alert.Heading> Hook useReducer </Alert.Heading>
       <p> Counter: { count } </p>
         <Button variant = "success" onClick={(e) => actionDo(e, 'increment')}> Плюсуем </Button>
-        <Button variant = "danger"  onClick={(e) => actionDo(e, 'decrement')}> Удаляем </Button>
+        <Button variant = "danger"  disabled = {count <= 0} onClick={(e) => actionDo(e, 'decrement')}> Удаляем </Button>
     </Alert>
   )
 }
