@@ -14,10 +14,15 @@ const Clock = (props) => {
       clearInterval(timer)
     }
   }, [])
+
+  const seconds = parseInt(currentTime.split(':')[2])
   return(
       <Alert {...props}>
-        <Alert.Heading> Hook useState </Alert.Heading>
+        <Alert.Heading> Hook useEffect </Alert.Heading>
         <p> Current Time: { currentTime } </p>
+        <div className = 'circle'>
+          <span className = 'hour_arrow' style = {{ transform: `rotate(${seconds * 6}deg)`}}></span>
+        </div>
       </Alert>
 
   )

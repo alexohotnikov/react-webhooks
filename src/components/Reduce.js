@@ -28,7 +28,7 @@ export default (props) => {
   return(
 
     <Alert {...props}>
-      <Alert.Heading> Hook useEffect </Alert.Heading>
+      <Alert.Heading> Hook useReducer </Alert.Heading>
       <p> Counter: { count } </p>
         <Button variant = "success" onClick={(e) => actionDo(e, 'increment')}> Плюсуем </Button>
         <Button variant = "danger"  onClick={(e) => actionDo(e, 'decrement')}> Удаляем </Button>
